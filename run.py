@@ -1,5 +1,38 @@
-#List of questions and possible answers for the quiz game 
+#Welcome message and introduction to the game
+"""
+In the intruduction of the game, i ask the user weather if they are interested om playing, their username and weather they would like to know the instructions
+"""
 
+print("Welcome to the magic of Mexico Quiz!\n")
+
+playing = (input("Would you like to play? ('y' or 'n') \n"))
+
+if playing != "y":
+        quit()
+else:
+
+    print(f"Great! ^_^, let`s beggin!\n")
+
+username = input("Tell me,then, what is your name?\n")
+
+if username.isdigit():
+    print(f"Please enter a valid name")
+else:
+    print(f"Welcome {username}!")
+    
+username_instructions = input("Would you like to know the instructions? ('y' or 'n') \n")
+
+if username_instructions == 'y':
+    print("Instructions are really simple, when a question pops up, you need to choose from the options available. You can input the answer with the numbers 1,2,3 or 4. The result will be shown to you, and if it is correct, it will be added to your score.")
+    print("In the end, you will know if you were aware of these amazing facts about Mexico.")
+else: 
+    quit()
+
+ 
+
+
+#List of questions and possible answers for the quiz game 
+"""
 questions = [
     {
         'question':
@@ -41,7 +74,7 @@ questions = [
     {
         'question':
         'From which country did Mexico get its independence?'
-        'answers':
+        'answers'
         ['United Kingdom', 'Germany', 'Spain', 'Netherlands'],
         'correct answer': 'Spain'
     },
@@ -73,4 +106,4 @@ questions = [
         'correct answer': 'Dog'
     }
 ]
-
+"""

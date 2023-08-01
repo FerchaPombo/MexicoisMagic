@@ -1,10 +1,15 @@
 #Welcome message and introduction to the game
 """
-In the intruduction of the game, i ask the user weather if they are interested om playing, their username and weather they would like to know the instructions
+In the intruduction of the game, i ask the user weather if they are interested on playing, 
+their username and weather they would like to know the instructions
 """
 
 print("Welcome to the magic of Mexico Quiz!\n")
 
+"""
+Here the user name is asked weather they would like to play or not. 
+If yes they are redirected to the next input request, if not, the program quits.
+"""
 playing = (input("Would you like to play? ('y' or 'n') \n"))
 
 if playing != "y":
@@ -12,6 +17,13 @@ if playing != "y":
 else:
 
     print(f"Great! ^_^, let`s beggin!\n")
+
+"""
+User is asked to introduce their prefered username, if they enter other input that letters, 
+the program requests the user to input their name again. Also, the user is asked weather to read or not the instructions. 
+when requested, instructions appear and then is asked to press enter to start the game. If the user doesnt want to read the  instructions ,
+they can procede directly to the game.
+"""
 
 username = input("Tell me,then, what is your name?\n")
 
@@ -25,8 +37,12 @@ username_instructions = input("Would you like to know the instructions? ('y' or 
 if username_instructions == 'y':
     print("Instructions are really simple, when a question pops up, you need to choose from the options available. You can input the answer with the numbers 1,2,3 or 4. The result will be shown to you, and if it is correct, it will be added to your score.")
     print("In the end, you will know if you were aware of these amazing facts about Mexico.")
-else: 
-    quit()
+    print("Press Enter to begin!")
+    input()
+else :
+    print("Press Enter to begin!")
+    input()
+
 
 
 #Defining my list of questions

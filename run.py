@@ -79,10 +79,16 @@ multiple_choices = (
     ("1.Drink", "2.Food ", "3.Dog", "4.Flower "),
     )
 
-answers = ()
+answers = ("1", "3", "2", "4", "2", "3", "4", "1", "2", "2")
+
 guesses = []
 socre = 0
 question_num = 0 
+
+for question in questions:
+    print('*************************')
+    print(question)
+    
 
 
 

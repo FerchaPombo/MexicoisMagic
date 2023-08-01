@@ -25,13 +25,16 @@ when requested, instructions appear and then is asked to press enter to start th
 they can procede directly to the game.
 """
 
-username = input("Tell me,then, what is your name?\n")
+username = input("Tell me then, what is your name?\n")
 
-if username.isdigit():
-    print(f"Please enter a valid name")
-else:
-    print(f"Welcome {username}!")
+while username.isnumeric():
+    print(f"Please enter a valid name\n")
+    username = input("Tell me then, what is your name?\n")
     
+
+else:
+    print(f"Welcome {username}!\n")
+
 username_instructions = input("Would you like to know the instructions? ('y' or 'n') \n")
 
 if username_instructions == 'y':

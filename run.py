@@ -69,19 +69,19 @@ questions = (
             )
 # Here i add the double tuple with the possible multiple choices 
 choices = (
-    ("A.El Castillo, Chichen Itza. Mexico ", "B.Prang Temple, Kol Ker. Cambodia ", "C.Giza Pyramid, Cairo. Egypt ", "D.Cholula Pyramid, Puebla. Mexico \n"), 
-    ("A. 10 ", "B. 1 ", "C. 69", "D. 20\n"), 
-    ("A.Bull and Eagle", "B.Eagle and Snake ", "C.Rabbit and Leopard", "D.Snake and Puma\n"), 
-    ("A.Quito ", "B.Monterey ", "C.Buenos Aires", "D.CdMx\n "),
-    ("A.Iztacihuatl", "B.Popocatepetl ", "C.Paricutin ", "D.Krakatoa \n"),
-    ("A.United Kingdom ", "B.Germany ", "C.Spain ", "D.Argentina\n"),
-    ("A.United States & Guatemala ", "B.United States, Guatemala & El Salvador ", "C.United States & Belize ", "D.United States, Guatemala & Belize\n "),
-    ("A.Aztec/Mexica ", "B.Maya ", "C.Tolteca ", "D.Inca \n"),
-    ("A.Hermosillo ", "B.CdMx ", "C.Guadalajara ", "D.Puebla\n "),
-    ("A.Drink", "B.Food ", "C.Dog", "D.Flower \n"),
+    ("1.El Castillo, Chichen Itza. Mexico ", "2.Prang Temple, Kol Ker. Cambodia ", "3.Giza Pyramid, Cairo. Egypt ", "4.Cholula Pyramid, Puebla. Mexico \n"), 
+    ("1. 10 ", "2. 1 ", "3. 69", "4. 20\n"), 
+    ("1.Bull and Eagle", "2.Eagle and Snake ", "3.Rabbit and Leopard", "4.Snake and Puma\n"), 
+    ("1.Quito ", "2.Monterey ", "3.Buenos Aires", "4.CdMx\n "),
+    ("1.Iztacihuatl", "2.Popocatepetl ", "3.Paricutin ", "4.Krakatoa \n"),
+    ("1.United Kingdom ", "2.Germany ", "3.Spain ", "4.Argentina\n"),
+    ("1.United States & Guatemala ", "2.United States, Guatemala & El Salvador ", "3.United States & Belize ", "4.United States, Guatemala & Belize\n "),
+    ("1.Aztec/Mexica ", "2.Maya ", "3.Tolteca ", "4.Inca \n"),
+    ("1.Hermosillo ", "2.CdMx ", "3.Guadalajara ", "4.Puebla\n "),
+    ("1.Drink", "2.Food ", "3.Dog", "4.Flower \n"),
     )
 
-answers = ("D", "C", "B", "D", "B", "C", "D", "B", "B", "C")
+answers = ("4", "3", "2", "4", "2", "3", "4", "2", "2", "3")
 guesses = []
 socre = 0
 question_num = 0 
@@ -92,14 +92,14 @@ for question in questions:
     for choice in choices[question_num]:
         print(choice)
 
-    guess = input("Enter ( A, B, C, D): ")
+    guess = input("Enter ( 1, 2, 3, 4): ")
     question_num += 1
     guesses.append(guess)
 
     if guess == answers[question_num]:
-        score =+ 1
-        print("Correct! you got 1 point")
+        score += 1
+        print("^_^Correct! you got 1 point^_^")
     else :
-        print("Incorrect")
+        print(":'‑( Incorrect :'‑(")
         print(f"{answers[question_num]} is the correct answer! Better luck next time.")
 

@@ -94,7 +94,13 @@ for question in questions:
         print(choice)
     guess = input("Enter ( 1, 2, 3, 4): ")
     question_num += 1
-
+    guesses.append(guess)
+    if guess == answers[question_num]:
+        score =+ 1
+        print("Correct! you got 1 point")
+    else :
+        print("Incorrect")
+        print(f"{answers[question_num]} is the correct answer! Better luck next time.")
 
 
 

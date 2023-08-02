@@ -12,11 +12,13 @@ If yes they are redirected to the next input request, if not, the program quits.
 """
 playing = (input("Would you like to play? ('y' or 'n') \n"))
 
-if playing != "y":
-        quit()
-else:
-
+if playing == 'y':
     print(f"Great! ^_^, let`s beggin!\n")
+
+elif playing == "n":
+    print("See you another time!")
+    quit()
+    
 
 """
 User is asked to introduce their prefered username, if they enter other input that letters, 
@@ -66,7 +68,7 @@ questions = (
             "The Xoloitzcuintli is the national [what] of Mexico? "
             )
 # Here i add the double tuple with the possible multiple choices 
-multiple_choices = (
+choices = (
     ("1.El Castillo, Chichen Itza. Mexico ", "2.Prang Temple, Kol Ker. Cambodia ", "3.Giza Pyramid, Cairo. Egypt ", "4.Cholula Pyramid, Puebla. Mexico "), 
     ("1. 10 ", "2. 1 ", "3. 69", "4. 20"), 
     ("1.Bull and Eagle", "2.Eagle and Snake ", "3.Rabbit and Leopard", "4.Snake and Puma"), 
@@ -86,11 +88,15 @@ socre = 0
 question_num = 0 
 
 for question in questions:
-    print('*************************')
     print(question)
-    
+    print('*******************************************************************\n')
+
+for choice in choices[question_num]:
+    print(choice)
 
 
+
+question_num += 1
 
 
 

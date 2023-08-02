@@ -56,29 +56,29 @@ List of quesions for the program to iterate through while running the game
 """
 
 questions = (
-            "Which country holds the world`s greatest pyramid and what is the name ?",
-            "How many languages are officially spoken throughout Mexico? ",
-            "What animals appear on Mexico`s flag? ", 
-            "What is the capital of Mexico and one of the largest cities in the world?", 
-            "This volcano, Located in Puebla, is an active volcano that covers the city in ash relatively often.", 
-            "From which country did Mexico get its independence? ",
-            "What countries border Mexico? ", 
-            "From the list below, name the most prominent native civilization in the Yucatan peninsula.", 
-            "Which Mexican city is built on an ancient lakebed, causing it to sink a few inches each year?", 
-            "The Xoloitzcuintli is the national [what] of Mexico? "
+            "Which country holds the world`s greatest pyramid and what is the name ?\n",
+            "How many languages are officially spoken throughout Mexico? \n",
+            "What animals appear on Mexico`s flag? \n", 
+            "What is the capital of Mexico and one of the largest cities in the world?\n", 
+            "This volcano, Located in Puebla, is an active volcano that covers the city in ash relatively often.\n", 
+            "From which country did Mexico get its independence? \n",
+            "What countries border Mexico?\n ", 
+            "From the list below, name the most prominent native civilization in the Yucatan peninsula.\n", 
+            "Which Mexican city is built on an ancient lakebed, causing it to sink a few inches each year?\n", 
+            "The Xoloitzcuintli is the national [what] of Mexico? \n"
             )
 # Here i add the double tuple with the possible multiple choices 
 choices = (
-    ("1.El Castillo, Chichen Itza. Mexico ", "2.Prang Temple, Kol Ker. Cambodia ", "3.Giza Pyramid, Cairo. Egypt ", "4.Cholula Pyramid, Puebla. Mexico "), 
-    ("1. 10 ", "2. 1 ", "3. 69", "4. 20"), 
-    ("1.Bull and Eagle", "2.Eagle and Snake ", "3.Rabbit and Leopard", "4.Snake and Puma"), 
-    ("1.Quito ", "2.Monterey ", "3.Buenos Aires", "4.CdMx "),
-    ("1.Iztacihuatl", "2.Popocatepetl ", "3.Paricutin ", "4.Krakatoa "),
-    ("1.United Kingdom ", "2.Germany ", "3.Spain ", "4.Argentina"),
-    ("1.United States & Guatemala ", "2.United States, Guatemala & El Salvador ", "3.United States & Belize ", "4.United States, Guatemala & Belize "),
-    ("1.Aztec/Mexica ", "2.Maya ", "3.Tolteca ", "4.Inca "),
-    ("1.Hermosillo ", "2.CdMx ", "3.Guadalajara ", "4.Puebla "),
-    ("1.Drink", "2.Food ", "3.Dog", "4.Flower "),
+    ("1.El Castillo, Chichen Itza. Mexico ", "2.Prang Temple, Kol Ker. Cambodia ", "3.Giza Pyramid, Cairo. Egypt ", "4.Cholula Pyramid, Puebla. Mexico \n"), 
+    ("1. 10 ", "2. 1 ", "3. 69", "4. 20\n"), 
+    ("1.Bull and Eagle", "2.Eagle and Snake ", "3.Rabbit and Leopard", "4.Snake and Puma\n"), 
+    ("1.Quito ", "2.Monterey ", "3.Buenos Aires", "4.CdMx\n "),
+    ("1.Iztacihuatl", "2.Popocatepetl ", "3.Paricutin ", "4.Krakatoa \n"),
+    ("1.United Kingdom ", "2.Germany ", "3.Spain ", "4.Argentina\n"),
+    ("1.United States & Guatemala ", "2.United States, Guatemala & El Salvador ", "3.United States & Belize ", "4.United States, Guatemala & Belize\n "),
+    ("1.Aztec/Mexica ", "2.Maya ", "3.Tolteca ", "4.Inca \n"),
+    ("1.Hermosillo ", "2.CdMx ", "3.Guadalajara ", "4.Puebla\n "),
+    ("1.Drink", "2.Food ", "3.Dog", "4.Flower \n"),
     )
 
 answers = ("1", "3", "2", "4", "2", "3", "4", "1", "2", "2")
@@ -88,15 +88,12 @@ socre = 0
 question_num = 0 
 
 for question in questions:
-    print(question)
     print('*******************************************************************\n')
-
-for choice in choices[question_num]:
-    print(choice)
-
-
-
-question_num += 1
+    print(question)
+    for choice in choices[question_num]:
+        print(choice)
+    guess = input("Enter ( 1, 2, 3, 4): ")
+    question_num += 1
 
 
 

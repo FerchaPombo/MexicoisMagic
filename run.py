@@ -104,19 +104,29 @@ for question in questions:
     question_num += 1
 
 """
-now we need to start displaying. theresults of the game 
+now we need to start displaying the results of the game, as well as the score, in numbers and in percentages.
+make sure to redo format of the answers and guesess.
 """
 
 print('*******************************************************************\n')
 print('*******(ᗒ ᗨᗕ)***********RESULTS************(ᗒᗨ ᗕ)****************\n')
 print('*******************************************************************\n')
 
-print("Correct answers: ", end= "")
+print("Correct answers: ")
 for answer in answers :
     print(answer, end=" ")
     print()
 
-print("this were your guesses: ", end="")
+print("This were your guesses: ")
 for guess in guesses:
     print(guess, end=" ")
     print()
+
+# calculating the score function
+"""
+This function is used to calculate the score of the game. It will return a number of correct answers,
+as well as a percentage of how much knowledge. This percentage will be given as an integer. rounding the number so it doesnt come out in a decimal.
+"""
+
+score = int(score / len(questions) * 100)
+print(f"Your score is {score}%")

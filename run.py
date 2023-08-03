@@ -84,7 +84,7 @@ choices = (
 answers = ("4", "3", "2", "4", "2", "3", "4", "2", "2", "3")
 guesses = []
 socre = 0
-question_num = 0 
+question_num = 0
 
 for question in questions:
     print('*******************************************************************\n')
@@ -93,13 +93,15 @@ for question in questions:
         print(choice)
 
     guess = input("Enter ( 1, 2, 3, 4): ")
-    question_num += 1
     guesses.append(guess)
 
     if guess == answers[question_num]:
-        score += 1
+        score =+ 1
         print("^_^Correct! you got 1 point^_^")
     else :
         print(":'‑( Incorrect :'‑(")
         print(f"{answers[question_num]} is the correct answer! Better luck next time.")
+    question_num += 1
+
+
 

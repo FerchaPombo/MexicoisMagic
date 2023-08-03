@@ -103,5 +103,20 @@ for question in questions:
         print(f"{answers[question_num]} is the correct answer! Better luck next time.")
     question_num += 1
 
+"""
+now we need to start displaying. theresults of the game 
+"""
 
+print('*******************************************************************\n')
+print('*******(ᗒ ᗨᗕ)***********RESULTS************(ᗒᗨ ᗕ)****************\n')
+print('*******************************************************************\n')
 
+print("Correct answers: ", end= "")
+for answer in answers :
+    print(answer, end=" ")
+    print()
+
+print("this were your guesses: ", end="")
+for guess in guesses:
+    print(guess, end=" ")
+    print()

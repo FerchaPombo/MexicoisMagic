@@ -1,24 +1,22 @@
-#Welcome message and introduction to the game
+# Welcome message and introduction to the game
 """
-In the intruduction of the game, i ask the user weather if they are interested on playing, 
-their username and weather they would like to know the instructions
+In this function the welcome message displays to the user. The user is asked weather they want to play.
+If the user selects 'Y' their username is asked to to write their name and if they would like to know the instructions. 
+There is a while loop created to validate the users input as correctly.
 """
-
-print("Welcome to the magic of Mexico Quiz!\n")
-
-"""
-Here the user name is asked weather they would like to play or not. 
-If yes they are redirected to the next input request, if not, the program quits.
-"""
-playing = (input("Would you like to play? ('y' or 'n') \n"))
-
-if playing == 'y':
+def welcome_message():
+    print("Welcome to the magic of Mexico Quiz!\n")
+while True:
+    playing = (input("Would you like to play? ('y' or 'n') \n"))
+    if playing == 'y':
     print(f"Great! ^_^, let`s beggin!\n")
+    break
+    elif playing == "n":
+        print("See you another time!")
+        quit()
+    else:
+        print("Not a valid option, please choose 'y' or 'n'")
 
-elif playing == "n":
-    print("See you another time!")
-    quit()
-    
 
 """
 User is asked to introduce their prefered username, if they enter other input that letters, 
@@ -44,13 +42,13 @@ if username_instructions == 'y':
     print("In the end, you will know if you were aware of these amazing facts about Mexico.")
     print("Press Enter to begin!")
     input()
-else :
+else: 
     print("Press Enter to begin!")
     input()
 
 
 
-#Defining my list of questions
+# Defining my list of questions
 """
 List of quesions for the program to iterate through while running the game
 """
@@ -83,7 +81,7 @@ choices = (
 
 answers = ("4", "3", "2", "4", "2", "3", "4", "2", "2", "3")
 guesses = []
-socre = 0
+score = 0
 question_num = 0
 
 for question in questions:
@@ -98,7 +96,7 @@ for question in questions:
     if guess == answers[question_num]:
         score =+ 1
         print("^_^Correct! you got 1 point^_^")
-    else :
+    else:
         print(":'‑( Incorrect :'‑(")
         print(f"{answers[question_num]} is the correct answer! Better luck next time.")
     question_num += 1

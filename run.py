@@ -9,7 +9,7 @@ def welcome_message():
 while True:
     playing = (input("Would you like to play? ('y' or 'n') \n"))
     if playing == 'y':
-    print(f"Great! ^_^, let`s beggin!\n")
+        print(f"Great! ^_^, let`s beggin!\n")
     break
     elif playing == "n":
         print("See you another time!")

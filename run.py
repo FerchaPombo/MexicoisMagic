@@ -1,12 +1,12 @@
 # Welcome message and introduction to the game
 """
 In this function the welcome message displays to the user. The user is asked weather they want to play.
-If the user selects 'Y' their username is asked to to write their name and if they would like to know the instructions. 
 There is a while loop created to validate the users input as correctly.
 """
 def welcome_message():
     print("Welcome to the magic of Mexico Quiz!\n")
-while True:
+
+while  True:
     playing = (input("Would you like to play? ('y' or 'n') \n"))
     if playing == 'y':
         print(f"Great! ^_^, let`s beggin!\n")
@@ -17,37 +17,41 @@ while True:
     else:
         print("Not a valid option, please choose 'y' or 'n'")
 
+# Request users name before we can begin the game
 
 """
-User is asked to introduce their prefered username, if they enter other input that letters, 
-the program requests the user to input their name again. Also, the user is asked weather to read or not the instructions. 
-when requested, instructions appear and then is asked to press enter to start the game. If the user doesnt want to read the  instructions ,
-they can procede directly to the game.
+In this function the user will be asked for their name. Any caracters that are not numerical, 
+will cause the program to reask the question to the user. 
 """
 
-username = input("Tell me then, what is your name?\n")
-
-while username.isnumeric():
-    print(f"Please enter a valid name\n")
-    username = input("Tell me then, what is your name?\n")
+def player_username():
     
+    while username.isnumeric():
+        print("Please enter a valid name \n")
+        username = input("Tell me then, what is your name?\n")
 
-else:
-    print(f"Welcome {username}!\n")
+    else: 
+        print(f"Welcome {username}!\n")
+ # Display instructions function 
+ """
+ User will be asked if they want to see the instructions dispayed or they want to procede directly to the game.
+ The function will proove the caracters inserted are correct and if the option 'n' is selected. the program will quit. 
+ Otherwise the game will prodcede to the questions.
+ """     
 
-username_instructions = input("Would you like to know the instructions? ('y' or 'n') \n")
-
-if username_instructions == 'y':
+def display_instructions():
+    username_instructions = input("Would you like to know the instructions? ('y' or 'n') \n")
+    while True
+    if username_instructions == 'y':
     print("Instructions are really simple, when a question pops up, you need to choose from the options available. You can input the answer with the numbers 1,2,3 or 4. The result will be shown to you, and if it is correct, it will be added to your score.")
     print("In the end, you will know if you were aware of these amazing facts about Mexico.")
     print("Press Enter to begin!")
     input()
-else: 
-    print("Press Enter to begin!")
-    input()
+    else:
+        print("Press Enter to begin!")
+        input()
 
-
-
+        
 # Defining my list of questions
 """
 List of quesions for the program to iterate through while running the game

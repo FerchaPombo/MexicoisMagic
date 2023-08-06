@@ -154,14 +154,17 @@ def start_game():
                 print(f"{j + 1}. {line}")
 
                 """
-                Up until this point, the questions are displayed on the terminal 
+                Up until this point, the questions are displayed on the terminal, randomly and sincronized with their choices
+                thanks to the enumerate function.
                 """
         while True:
             player_choice = input("Take a guess, answer '1','2','3' or '4':    \n")
-
+            """
+            here is use a if statement that checks two conditions, if the player chioce is a digit and 
+            if it is one of the following. 1,2,3,4.
+            """
             if player_choice.isdigit() and int(player_choice) in [1,2,3,4]:
                 break
-
             print("ᕕ( ᐛ )ᕗ Only answer numbers from '1' to '4', try again!")
 
 def run():

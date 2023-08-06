@@ -1,72 +1,5 @@
-# Welcome message and introduction to the game
-"""
-In this function the welcome message displays to the user. The user is asked 
-weather they want to play. There is a while loop created to validate the users
-input as correctly.
-"""
-print("Welcome to the magic of Mexico Quiz!\n")
-
-def welcome_message():
-    playing = None
-    
-    while  True:
-        playing = (input("Would you like to play? ('y' or 'n') \n"))
-    
-        if playing == 'y':
-            print(f"Great! ^_^, let`s beggin!\n")
-            break
-
-        elif playing == "n":
-            print("See you another time!")
-            quit()
-            break
-        else:
-            print("Not a valid option, please choose 'y' o r 'n'")
-
-# Request users name before we can begin the game
-
-"""
-In this function the user will be asked for their name. Any caracters that are not numerical, 
-will cause the program to reask the question to the user. 
-"""
-
-def player_username():
-    username = input("Tell me then, what is your name?\n")
-    
-    while username.isnumeric():
-        print("Please enter a valid name \n")
-        username = input("Tell me then, what is your name?\n")
-
-    else: 
-        print(f"Welcome {username}!\n")
-
- 
-# Display instructions function 
-
-"""
- User will be asked if they want to see the instructions dispayed or they want to procede directly to the game.
- The function will proove the caracters inserted are correct and if the option 'n' is selected. the program will quit. 
- Otherwise the game will prodcede to the questions.
-"""     
-
-def display_instructions():
-
-    username_instructions = (input("Would you like to know the instructions? ('y' or 'n') \n"))
-
-    while True:
-
-        if username_instructions == 'y':
-            print("Instructions are really simple, when a question pops up, you need to choose from the options available. You can input the answer with the numbers 1,2,3 or 4. The result will be shown to you, and if it is correct, it will be added to your score.")
-            print("In the end, you will know if you were aware of these amazing facts about Mexico.")
-            print("Press Enter to begin!")
-            input()
-            break
-        else:
-            print("Press Enter to begin!")
-            input()
-            break
-            
-
+import random
+import textwrap
 
 # Defining my list of questions
 """
@@ -129,16 +62,104 @@ data = [
     }
 ]
 
+# Welcome message and introduction to the game
+"""
+In this function the welcome message displays to the user. The user is asked 
+weather they want to play. There is a while loop created to validate the users
+input as correctly.
+"""
+print("Welcome to the magic of Mexico Quiz!\n")
+
+def welcome_message():
+    playing = None
+    
+    while  True:
+        playing = (input("Would you like to play? ('y' or 'n') \n"))
+    
+        if playing == 'y':
+            print(f"Great! ^_^, let`s beggin!\n")
+            break
+
+        elif playing == "n":
+            print("See you another time!")
+            quit()
+            break
+        else:
+            print("Not a valid option, please choose 'y' o r 'n'")
+
+# Request users name before we can begin the game
+
+"""
+In this function the user will be asked for their name. Any caracters that are not numerical, 
+will cause the program to reask the question to the user. 
+"""
+
+def player_username():
+    username = input("Tell me then, what is your name?\n")
+    
+    while username.isnumeric():
+        print("Please enter a valid name \n")
+        username = input("Tell me then, what is your name?\n")
+
+    else: 
+        print(f"Welcome {username}!\n")
+
+ 
+# Display instructions function 
+
+"""
+ User will be asked if they want to see the instructions dispayed or they want to procede directly to the game.
+ The function will proove the caracters inserted are correct and if the option 'n' is selected. the program will quit. 
+ Otherwise the game will prodcede to the questions.
+"""     
+
+def display_instructions():
+
+    username_instructions = (input("Would you like to know the instructions? ('y' or 'n') \n"))
+
+    while True:
+
+        if username_instructions == 'y':
+            print("Instructions are really simple, when a question pops up, you need to choose from the options available. You can input the answer with the numbers 1,2,3 or 4. The result will be shown to you, and if it is correct, it will be added to your score.")
+            print("In the end, you will know if you were aware of these amazing facts about Mexico.\n")
+            print("Press Enter to begin!")
+            input()
+            break
+        else:
+            print("Press Enter to begin!")
+            input()
+            break
+
+
+# Start the game function 
+def start_game():
+    """
+    This function will start the game  when the user presses Enter.
+    the questions will be selected ramdomly and displayed along with the possible choices. 
+    """
+    # Randomly shuffle the questions
+    random.shuffle(data)
+    # Set up the initial score 
+    score = 0 
+    for i, question in enumerate(data):
+        # make the question text to a max of 100 with 
+        small_question = textwrap.wrap(question['question'],width=100)
+        # print each line for the small question.
+        for line in small_question:
+            print(line)
+
+
+
+
+
+
+
 def get_questions():
-    """
-    Getting the questions from my data dictionary
-    """
-    for question in data:
-        print(question)
+    for questions in data:
+        print(questions)
         
 def show_question():
-    answer = 1 
-    return answer
+    psss
 def check_answer(choice):
     pass
 def update_score():
@@ -152,5 +173,6 @@ def run():
     welcome_message()
     player_username()
     display_instructions()
+    start_game()
 
 run()

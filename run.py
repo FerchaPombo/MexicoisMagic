@@ -29,23 +29,28 @@ In this function the user will be asked for their name. Any caracters that are n
 will cause the program to reask the question to the user. 
 """
 
+
 def player_username():
-    
-    while username.isnumeric():
-        print("Please enter a valid name \n")
-        username = input("Tell me then, what is your name?\n")
 
-    else: 
-        print(f"Welcome {username}!\n")
+while True 
+    username = input("Tell me then, what is your name?\n")
+  
+    if username.isnumeric() :
+        print("Please enter a valid alphabetic character name \n")
+        break   
+    else :
+        print(f"Welcome {username}!\n") 
 
- 
-# Display instructions function 
 
 """
+# Display instructions function 
+
+
  User will be asked if they want to see the instructions dispayed or they want to procede directly to the game.
  The function will proove the caracters inserted are correct and if the option 'n' is selected. the program will quit. 
  Otherwise the game will prodcede to the questions.
-"""     
+    
+username_instructions = input("Would you like to know the instructions? ('y' or 'n') \n")
 
 def display_instructions():
     
@@ -63,9 +68,9 @@ def display_instructions():
 
 
 # Defining my list of questions
-"""
+
 List of quesions for the program to iterate through while running the game
-"""
+
 
 data = [
     {
@@ -137,6 +142,7 @@ def restart_game():
 
 def run():
     display_welcome_message()
+    display_player_username()
     display_instructions()
     questions = get_questions()
 
@@ -145,7 +151,7 @@ def run():
         check_answer(answer)
 
 
-"""
+
 guesses = []
 score = 0
 question_num = 0

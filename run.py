@@ -23,7 +23,7 @@ while True:
         quit()
     else:
         print("Not a valid option, plase choose 'Y' or 'N'")
-welcome_message()
+
 
 # Request users name before we can begin the game
 
@@ -160,43 +160,3 @@ def run():
 
 
 
-guesses = []
-score = 0
-question_num = 0
-
-for question in questions:
-    print('*******************************************************************\n')
-    print(question)
-    for choice in choices[question_num]:
-        print(choice)
-
-    guess = input("Enter ( 1, 2, 3, 4): ")
-    guesses.append(guess)
-
-    if guess == answers[question_num]:
-        score =+ 1
-        print("^_^Correct! you got 1 point^_^")
-    else:
-        print(":'‑( Incorrect :'‑(")
-        print(f"{answers[question_num]} is the correct answer! Better luck next time.")
-    question_num += 1
-
-
-
-print('*******************************************************************\n')
-print('*******(ᗒ ᗨᗕ)***********RESULTS************(ᗒᗨ ᗕ)****************\n')
-print('*******************************************************************\n')
-
-print("Correct answers: ")
-for answer in answers :
-    print(answer, end=" ")
-    print()
-
-print("This were your guesses: ")
-for guess in guesses:
-    print(guess, end=" ")
-    print()
-
-
-score = int(score / len(questions) * 100)
-print(f"Your score is {score}%")

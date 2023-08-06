@@ -1,58 +1,60 @@
+import random 
+
 # Welcome message and introduction to the game
 """
 In this function the welcome message displays to the user. The user is asked 
 weather they want to play. There is a while loop created to validate the users
 input as correctly.
 """
+print("Welcome to the magic of Mexico Quiz!\n")
+
 
 def welcome_message():
-    print("Welcome to the magic of Mexico Quiz!\n")
+    player = (input("Would you like to play? ('y' or 'n') \n"))
 
 
 while True:
-    playing = (input("Would you like to play? ('y' or 'n') \n"))
-    
-    if playing == 'y':
+    player = (input("Would you like to play? ('y' or 'n') \n"))
+    if player == 'y':
         print(f"Great! ^_^, let`s beggin!\n")
-        break
-
-    elif playing == "n":
+        quit()
+    elif player == "n":
         print("See you another time!")
         quit()
     else:
-        print("Not a valid option, please choose 'y' o r 'n'")
+        print("Not a valid option, plase choose 'Y' or 'N'")
+welcome_message()
 
 # Request users name before we can begin the game
-
-"""
-In this function the user will be asked for their name. Any caracters that are not numerical, 
-will cause the program to reask the question to the user. 
-"""
 
 
 def player_username():
 
-while True 
+    """
+    In this function the user will be asked for their name. Any caracters that are not numerical,
+    or is left empty, will cause the program to reask the question to the user.
+    """
+
+while True:
     username = input("Tell me then, what is your name?\n")
-  
-    if username.isnumeric() :
-        print("Please enter a valid alphabetic character name \n")
-        break   
-    else :
-        print(f"Welcome {username}!\n") 
 
+    if username.isnumeric():
+        break
+        print("Please enter just alphabetical characters, username can not be left unsaid \n")
+               
+    else:
+        print(f"Welcome {username}!\n")
+    
 
-"""
 # Display instructions function 
-
-
+"""
  User will be asked if they want to see the instructions dispayed or they want to procede directly to the game.
  The function will proove the caracters inserted are correct and if the option 'n' is selected. the program will quit. 
  Otherwise the game will prodcede to the questions.
-    
-username_instructions = input("Would you like to know the instructions? ('y' or 'n') \n")
+"""
 
 def display_instructions():
+
     
     while True:
         username_instructions = input("Would you like to know the instructions? ('y' or 'n') \n")
@@ -65,12 +67,14 @@ def display_instructions():
         else:
             print("Press Enter to begin!")
             input()
+        return username_instructions
+
 
 
 # Defining my list of questions
-
+"""
 List of quesions for the program to iterate through while running the game
-
+"""
 
 data = [
     {
@@ -128,6 +132,7 @@ data = [
 ]
 
 def get_questions():
+
     pass
 def show_question():
     answer = 1 
@@ -141,8 +146,11 @@ def restart_game():
 
 
 def run():
-    display_welcome_message()
-    display_player_username()
+    """
+    Run all program functions
+    """
+    welcome_message()
+    player_username()
     display_instructions()
     questions = get_questions()
 
@@ -192,4 +200,3 @@ for guess in guesses:
 
 score = int(score / len(questions) * 100)
 print(f"Your score is {score}%")
-"""

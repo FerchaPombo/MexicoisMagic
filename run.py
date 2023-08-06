@@ -1,93 +1,27 @@
-import random 
-
 # Welcome message and introduction to the game
 """
 In this function the welcome message displays to the user. The user is asked 
 weather they want to play. There is a while loop created to validate the users
 input as correctly.
 """
-<<<<<<< HEAD
 print("Welcome to the magic of Mexico Quiz!\n")
 
-
 def welcome_message():
-    player = (input("Would you like to play? ('y' or 'n') \n"))
-
-
-while True:
-    player = (input("Would you like to play? ('y' or 'n') \n"))
-    if player == 'y':
-        print(f"Great! ^_^, let`s beggin!\n")
-        quit()
-    elif player == "n":
-        print("See you another time!")
-        quit()
-    else:
-        print("Not a valid option, plase choose 'Y' or 'N'")
-
-
-# Request users name before we can begin the game
-
-
-def player_username():
-
-    """
-    In this function the user will be asked for their name. Any caracters that are not numerical,
-    or is left empty, will cause the program to reask the question to the user.
-    """
-
-while True:
-    username = input("Tell me then, what is your name?\n")
-
-    if username.isnumeric():
-        break
-        print("Please enter just alphabetical characters, username can not be left unsaid \n")
-               
-    else:
-        print(f"Welcome {username}!\n")
-=======
-
-def welcome_message():
-    print("Welcome to the magic of Mexico Quiz!\n")
-
-
-while  True:
-    playing = (input("Would you like to play? ('y' or 'n') \n"))
->>>>>>> 571a55c25379aecbb290935832e4ed686bdac064
+    playing = None
     
-if playing == 'y':
-    print(f"Great! ^_^, let`s beggin!\n")
-    break
-
-<<<<<<< HEAD
-# Display instructions function 
-"""
- User will be asked if they want to see the instructions dispayed or they want to procede directly to the game.
- The function will proove the caracters inserted are correct and if the option 'n' is selected. the program will quit. 
- Otherwise the game will prodcede to the questions.
-"""
-
-def display_instructions():
-
+    while  True:
+        playing = (input("Would you like to play? ('y' or 'n') \n"))
     
-    while True:
-        username_instructions = input("Would you like to know the instructions? ('y' or 'n') \n")
+        if playing == 'y':
+            print(f"Great! ^_^, let`s beggin!\n")
+            break
 
-        if username_instructions == 'y':
-            print("Instructions are really simple, when a question pops up, you need to choose from the options available. You can input the answer with the numbers 1,2,3 or 4. The result will be shown to you, and if it is correct, it will be added to your score.")
-            print("In the end, you will know if you were aware of these amazing facts about Mexico.")
-            print("Press Enter to begin!")
-            input()
+        elif playing == "n":
+            print("See you another time!")
+            quit()
+            break
         else:
-            print("Press Enter to begin!")
-            input()
-        return username_instructions
-=======
-elif playing == "n":
-    print("See you another time!")
-    quit()
-else:
-    print("Not a valid option, please choose 'y' o r 'n'")
+            print("Not a valid option, please choose 'y' o r 'n'")
 
 # Request users name before we can begin the game
 
@@ -95,9 +29,9 @@ else:
 In this function the user will be asked for their name. Any caracters that are not numerical, 
 will cause the program to reask the question to the user. 
 """
->>>>>>> 571a55c25379aecbb290935832e4ed686bdac064
 
 def player_username():
+    username = input("Tell me then, what is your name?\n")
     
     while username.isnumeric():
         print("Please enter a valid name \n")
@@ -116,17 +50,22 @@ def player_username():
 """     
 
 def display_instructions():
-    username_instructions = input("Would you like to know the instructions? ('y' or 'n') \n")
-while True:
 
-    if username_instructions == 'y':
-        print("Instructions are really simple, when a question pops up, you need to choose from the options available. You can input the answer with the numbers 1,2,3 or 4. The result will be shown to you, and if it is correct, it will be added to your score.")
-        print("In the end, you will know if you were aware of these amazing facts about Mexico.")
-        print("Press Enter to begin!")
-        input()
-    else:
-        print("Press Enter to begin!")
-        input()
+    username_instructions = (input("Would you like to know the instructions? ('y' or 'n') \n"))
+
+    while True:
+
+        if username_instructions == 'y':
+            print("Instructions are really simple, when a question pops up, you need to choose from the options available. You can input the answer with the numbers 1,2,3 or 4. The result will be shown to you, and if it is correct, it will be added to your score.")
+            print("In the end, you will know if you were aware of these amazing facts about Mexico.")
+            print("Press Enter to begin!")
+            input()
+            break
+        else:
+            print("Press Enter to begin!")
+            input()
+            break
+            
 
 
 # Defining my list of questions
@@ -148,13 +87,13 @@ data = [
 
     },
     {
-        "question": "What animals appear on Mexico`s flag?"
-        "choices": ["1.Bull and Eagle", "2.Eagle and Snake ", "3.Rabbit and Leopard", "4.Snake and Puma"],
+        "question": "What animals appear on Mexico`s flag?",
+        "choices":["1.Bull and Eagle", "2.Eagle and Snake ", "3.Rabbit and Leopard", "4.Snake and Puma"],
         "answer": "2",
     },
     {
         "question": "What is the capital of Mexico and one of the largest cities in the world?",
-        "choices": ["1.Quito ", "2.Monterey ", "3.Buenos Aires", "4.CdMx"]
+        "choices": ["1.Quito ", "2.Monterey ", "3.Buenos Aires", "4.CdMx"],
         "answer": "4",
     },
     {
@@ -166,7 +105,7 @@ data = [
         "question": "From which country did Mexico get its independence?",
         "coices": ["1.United Kingdom ", "2.Germany ", "3.Spain ", "4.Argentina"],
         "answer": "3",
-    ,
+    
     },
     {
         "question": "What countries border Mexico?",
@@ -191,7 +130,12 @@ data = [
 ]
 
 def get_questions():
-    pass
+    """
+    Getting the questions from my data dictionary
+    """
+    for question in data:
+        print(question)
+        
 def show_question():
     answer = 1 
     return answer
@@ -204,12 +148,9 @@ def restart_game():
 
 
 def run():
-    display_welcome_message()
+
+    welcome_message()
+    player_username()
     display_instructions()
-    questions = get_questions:
 
-    for question in questions:
-        answer = show_questions
-        check_answer(answer)
-
-
+run()

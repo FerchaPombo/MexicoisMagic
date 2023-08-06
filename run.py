@@ -134,8 +134,8 @@ def display_instructions():
 # Start the game function 
 def start_game():
     """
-    This function will start the game  when the user presses Enter.
-    the questions will be selected ramdomly and displayed along with the possible choices. 
+    This function will start the game when the user presses Enter. tshe random import willrandomly sort the questions.
+    the initial score will be set up to 0.
     """
     # Randomly shuffle the questions
     random.shuffle(data)
@@ -147,19 +147,21 @@ def start_game():
         # print each line for the small question.
         for line in small_question:
             print(line)
+        for j, choices in enumerate(question['choices']):
+            # make the question text to a max of 100 with 
+            small_answer = textwrap.wrap(choices, width=100)
+            for line in small_answer:
+                print(f"{j + 1}. {line}")
 
-
-
-
-
-
-
+    """
+    Up until this point, the questions are displayed on the terminal 
+    """
+            
 def get_questions():
-    for questions in data:
-        print(questions)
+    pass
         
 def show_question():
-    psss
+    pass
 def check_answer(choice):
     pass
 def update_score():

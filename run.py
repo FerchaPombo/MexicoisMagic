@@ -147,28 +147,22 @@ def start_game():
         # print each line for the small question.
         for line in small_question:
             print(line)
-        for j, choices in enumerate(question['choices']):
+        for j, choice in enumerate(question['choices']):
             # make the question text to a max of 100 with 
-            small_answer = textwrap.wrap(choices, width=100)
-            for line in small_answer:
+            small_choice = textwrap.wrap(choice, width=100)
+            for line in small_choice:
                 print(f"{j + 1}. {line}")
 
-    """
-    Up until this point, the questions are displayed on the terminal 
-    """
-            
-def get_questions():
-    pass
-        
-def show_question():
-    pass
-def check_answer(choice):
-    pass
-def update_score():
-    pass
-def restart_game():
-    pass
+                """
+                Up until this point, the questions are displayed on the terminal 
+                """
+        while True:
+            player_choice = input("Take a guess, answer '1','2','3' or '4':    \n")
 
+            if player_choice.isdigit() and int(player_choice) in [1,2,3,4]:
+                break
+
+            print("ᕕ( ᐛ )ᕗ Only answer numbers from '1' to '4', try again!")
 
 def run():
 

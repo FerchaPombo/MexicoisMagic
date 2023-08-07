@@ -1,15 +1,31 @@
 # Mexico is Magic Quiz
 
 Mexico is Magic is a simple Python quiz game that deploys to a console.
- 
+
 This quiz game starts running with a welcome message, where the user is asked to provide input like their username, and whether they want to play or not.  This is followed by 10 questions, each, with 4 possible choices and just one answer to choose from. 
 
 All the data is stored in the run.py file and nothing is imported or exported to any external file. 
 it includes functions that help the program get data from the user, validate the input of the player so we have just the right values, calculate a score and restart the program if needed. 
 
+## **Features**
+
+### How to play
+
+*The empty screen opens with a Welcome message.
+
+*The player is asked whether they want to play, and if the answer is 'y' they are asked what is their name. If the answer is 'n' the program quits.
+
+*The username can not be left empty and the program will ask again for their name and validate the data in alphabetical characters. 
+
+*The player is then, asked whether they want to read the instructions or skip that step. when the answer is 'n' the program goes directly to the option "Press Enter to continue". If the player answers 'y' the instructions display and they need to press " enter" to continue. If they input data other than 'y' or 'n' they are asked to enter valid data.
+
+*After this, the multiple choice questions display randomly,  selected by the program, and the user is prompted to select an answer from the list numbered 1-4. the goal is for the user to guess correctly as many as possible.
+
+*After answering all 10 questions, the score of the player is displayed in an x/10 format.
+
+*The player then has the option to restart the game or quit the program.
 
 
-## Reminders
 
 - Your code must be placed in the `run.py` file
 - Your dependencies must be placed in the `requirements.txt` file

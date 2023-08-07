@@ -180,6 +180,29 @@ def start_game():
         else:
             print("（◞‸◟） INCORRECT （◞‸◟）")
             print(f"The right answer is {question['answer']}")
+
+        print()
+        if score == 10:
+            print(f" YEY! {player_username}, you are almost mexican!")  
+        print(f"GAME OVER... you scored : {score}/{len(data)}.")
+
+        # Ask the player if they want to play again
+        """ 
+        this while loops will ask the player if they want to play again, if so , the whole start_game 
+        function will run from the beggining. if no, the program will end, and if the user inputs 
+        something else than 'y' or 'n' to the terminal, they will be asked to input the correct data. 
+        """
+        
+    while True:
+        restart_game = input(f"Would you like to play again {player_username}? 'y' or 'n' ")
+        if restart_game == 'y':
+            start_game()
+            break
+        elif restart_game == 'n':
+            exit()
+        else:
+            print("Please enter 'y' or 'n'")
+
         
 
 

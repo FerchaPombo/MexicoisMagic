@@ -8,57 +8,66 @@ List of quesions for the program to iterate through while running the game
 
 data = [
     {
-        'question': "Which country holds the world`s greatest pyramid and what is the name ?",
-        'choices': ["El Castillo, Chichen Itza. Mexico ", "Prang Temple, Kol Ker. Cambodia ", "Giza Pyramid, Cairo. Egypt ", "Cholula Pyramid, Puebla. Mexico"],
+        'question': 
+        "Which country holds the world`s greatest pyramid and what is the name ?",
+        "choices": ["El Castillo, Chichen Itza. Mexico ", "Prang Temple, Kol Ker. Cambodia ", "Giza Pyramid, Cairo. Egypt ", "Cholula Pyramid, Puebla. Mexico"],
         'answer': "4",
 
     },
     {
-        "question": "How many languages are officially spoken throughout Mexico?",
-        "choices": [" 10 ", " 1 ", " 69", " 20"],
+        "question": 
+        "How many languages are officially spoken throughout Mexico?",
+        "choices" : [" 10 ", " 1 ", " 69", " 20"],
         "answer" : "3",
 
     },
     {
-        "question": "What animals appear on Mexico`s flag?",
-        "choices":["Bull and Eagle", "Eagle and Snake ", "Rabbit and Leopard", "Snake and Puma"],
+        "question": 
+        "What animals appear on Mexico`s flag?",
+        "choices" :["Bull and Eagle", "Eagle and Snake ", "Rabbit and Leopard", "Snake and Puma"],
         "answer": "2",
     },
     {
         "question": "What is the capital of Mexico and one of the largest cities in the world?",
-        "choices": ["Quito ", "Monterey ", "Buenos Aires", "CdMx"],
-        "answer": "4",
+        "choices" : ["Quito ", "Monterey ", "Buenos Aires", "CdMx"],
+        "answer" : "4",
     },
     {
-        "question": "This volcano, Located in Puebla, is an active volcano that covers the city in ash relatively often",
-        "choices": ["Iztacihuatl", "Popocatepetl ", "Paricutin ", "Krakatoa"],
-        "answer": "2",
+        "question": 
+        "This volcano, Located in Puebla, is an active volcano that covers the city in ash relatively often",
+        "choices" : ["Iztacihuatl", "Popocatepetl ", "Paricutin ", "Krakatoa"],
+        "answer" : "2",
     },
     {
-        "question": "From which country did Mexico get its independence?",
-        "coices": ["United Kingdom ", "Germany ", "Spain ", "Argentina"],
+        "question":
+        "From which country did Mexico get its independence?",
+        "choices": ["United Kingdom ", "Germany ", "Spain ", "Argentina"],
         "answer": "3",
     
     },
     {
-        "question": "What countries border Mexico?",
-        "choices": ["United States & Guatemala ", "United States, Guatemala & El Salvador ", "United States & Belize ", "United States, Guatemala & Belize"],
-        "answer": "4"
+        "question":
+        "What countries border Mexico?",
+        "choices" : ["United States & Guatemala ", "United States, Guatemala & El Salvador ", "United States & Belize ", "United States, Guatemala & Belize"],
+        "answer" : "4"
     },
     {
-        "question": "From the list below, name the most prominent native civilization in the Yucatan peninsula.",
-        "choices": ["Aztec/Mexica ", "Maya ", "Tolteca ", "Inca"],
+        "question": 
+        "From the list below, name the most prominent native civilization in the Yucatan peninsula.",
+        "choices" : ["Aztec/Mexica ", "Maya ", "Tolteca ", "Inca"],
         "answer": "2",
     },
     {
-        "question": "Which Mexican city is built on an ancient lakebed, causing it to sink a few inches each year?",
-        "choices": ["Hermosillo ", "CdMx ", "Guadalajara ", "Puebla"],
+        "question": 
+        "Which Mexican city is built on an ancient lakebed, causing it to sink a few inches each year?",
+        "choices" : ["Hermosillo ", "CdMx ", "Guadalajara ", "Puebla"],
         "answer": "2",
     },
     {
-        "question": "The Xoloitzcuintli is the national [what] of Mexico?",
-        "choices": ["Drink", "Food ", "Dog", "Flower"],
-        "answer": "3",
+        "question": 
+        "The Xoloitzcuintli is the national [what] of Mexico?",
+        "choices" : ["Drink", "Food ", "Dog", "Flower"],
+        "answer" : "3",
     }
 ]
 
@@ -146,11 +155,12 @@ def start_game():
         small_question = textwrap.wrap(question['question'],width=100)
         # print each line for the small question.
         for line in small_question:
+            print()
             print(line)
-        for j, answer in enumerate(question['answer']):
+        for j, choice in enumerate(question['choices']):
             # make the question text to a max of 100 with 
-            small_answer = textwrap.wrap(answer, width=100)
-            for line in small_answer:
+            small_choice = textwrap.wrap(choice, width=100)
+            for line in small_choice:
                 print(f"{j + 1}. {line}")
 
                 """

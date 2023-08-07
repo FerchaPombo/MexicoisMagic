@@ -199,6 +199,7 @@ def start_game():
             start_game()
             break
         elif restart_game == 'n':
+            print(f"Good bye {player_username}, see you soon!")
             exit()
         else:
             print("Please enter 'y' or 'n'")

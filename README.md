@@ -1,4 +1,4 @@
-# Mexico is Magic Quiz
+# **Mexico is Magic Quiz**
 
 Mexico is Magic is a simple Python quiz game that deploys to a console.
 
@@ -24,6 +24,14 @@ it includes functions that help the program get data from the user, validate the
 *After answering all 10 questions, the score of the player is displayed in an x/10 format.
 
 *The player then has the option to restart the game or quit the program.
+
+## Game elements 
+
+###
+
+
+
+
 
 
 

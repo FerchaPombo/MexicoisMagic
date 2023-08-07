@@ -34,7 +34,7 @@ data = [
         "answer": "4",
     },
     {
-        "question": 
+        "question":
         "This volcano, Located in Puebla, is an active volcano that covers the city in ash relatively often",
         "choices": ["Iztacihuatl", "Popocatepetl ", "Paricutin ", "Krakatoa"],
         "answer": "2",
@@ -44,7 +44,7 @@ data = [
         "From which country did Mexico get its independence?",
         "choices": ["United Kingdom ", "Germany ", "Spain ", "Argentina"],
         "answer": "3",
-  
+
     },
     {
         "question":
@@ -74,7 +74,7 @@ data = [
 
 # Welcome message and introduction to the game
 """
-In this function the welcome message displays to the user. The user is asked 
+In this function the welcome message displays to the user. The user is asked
 weather they want to play. There is a while loop created to validate the users
 input as correctly.
 """
@@ -86,7 +86,7 @@ def welcome_message():
 
     while True:
         playing = (input("Would you like to play? ('y' or 'n') \n"))
-    
+ 
         if playing == 'y':
             print(f"Great! ^_^, let`s beggin!\n")
             break
@@ -162,7 +162,7 @@ def start_game():
             print()
             print(line)
         for j, choice in enumerate(question['choices']):
-            # make the question text to a max of 100 with 
+            # make the question text to a max of 100 width 
             small_choice = textwrap.wrap(choice, width=80)
             for line in small_choice:
                 print(f"{j + 1}. {line}")
@@ -191,12 +191,13 @@ def start_game():
         print(f"GAME OVER... you scored : {score}/{len(data)}.")
 
         # Ask the player if they want to play again
-        """ 
+        """
         this while loops will ask the player if they want to play again, if so , the whole start_game
         function will run from the beggining. if no, the program will end, and if the user inputs
         something else than 'y' or 'n' to the terminal, they will be asked to input the correct data.
         """
-        
+
+  
     while True:
         restart_game = input(f"Would you like to play again {player_username}? 'y' or 'n' ")
         if restart_game == 'y':

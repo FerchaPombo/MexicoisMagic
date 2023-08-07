@@ -167,13 +167,58 @@ def start_game():
                 Up until this point, the questions are displayed on the terminal, randomly and sincronized with their choices
                 thanks to the enumerate function.
                 """
+
+        while True:
+            players_choice = input(Take a guess, answer '1','2','3' or '4':    \n")
+
+            if int[players_choice] in [1,2,3,4]:
+                break
+            print(""ᕕ( ᐛ )ᕗ Only answer numbers from '1' to '4', try again!")
+
+            
+
+
+
+
+
+            """
+            inside the try we convert the string entered by the player into an integer. 
+            If the value can not be converted into string raises a ValueError, 
+            or if the values entered is no 1,2,3, or 4.
+            """
+            
+
+
+
+
+
+
+    
+    
+    """
+    try: 
+        [int(value) for value in value]
+        if value != int.range(0,5):
+            raise ValueError(
+                f"Please provide a valid number: '1','2','3','4'"
+        )
+    """
+
+
+
+
+
+
+
+
+    """
         while True:
             print()
-            player_choice = input("Take a guess, answer '1','2','3' or '4':    \n")
-            """
+            player_choice = input(")
+            
             here is use a if statement that checks two conditions, if the player chioce is a digit and 
             if it is one of the following. 1,2,3,4.
-            """
+            
             if player_choice.isdigit() and int(player_choice) in [1,2,3,4]:
                 break
                 print("ᕕ( ᐛ )ᕗ Only answer numbers from '1' to '4', try again!")
@@ -186,10 +231,8 @@ def start_game():
                 print("（◞‸◟） INCORRECT （◞‸◟）")
                 print(f"The right answer is {question['answer']}")
 
-
-  
+    """         
             
-
 def run():
 
     welcome_message()

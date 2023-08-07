@@ -1,8 +1,13 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Mexico is Magic Quiz
 
-Welcome,
+Mexico is Magic is a simple Python quiz game that deploys to a console.
+ 
+This quiz game starts running with a welcome message, where the user is asked to provide input like their username, and whether they want to play or not.  This is followed by 10 questions, each, with 4 possible choices and just one answer to choose from. 
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+All the data is stored in the run.py file and nothing is imported or exported to any external file. 
+it includes functions that help the program get data from the user, validate the input of the player so we have just the right values, calculate a score and restart the program if needed. 
+
+
 
 ## Reminders
 

@@ -27,7 +27,85 @@ it includes functions that help the program get data from the user, validate the
 
 ## Game elements 
 
-###
+### _1 - Player username_
+
+ *After the welcome message, the player is asked to enter their username. 
+*The player must enter a valid data type, that means any alphabetical character, and at least 1, otherwise they will receive an error message. 
+
+!insert image of username asked 
+
+!add image when it was incorrectly inputed 
+
+### _2 - Instructions_
+
+ * After the player enters their name, they are offered the possibility of reading the instructions of the game or continuing without it. 
+
+!add image of instructions asked ,plus instructions
+
+*After any of the two choices they are asked to press enter to continue to the quiz. 
+*If they enter something other than 'y' or 'n', the player is asked to answer again the question.
+!imagen de press enter to continue 
+
+### _3 - Quiz Questions_
+
+* The player is presented with the first randomized quiz question.
+this is achieved by the import random function at the beginning of the run.py file. 
+image 'random.shuffle(data)'
+* After the first question is printed in the console, the 4 possible choices appear, but only one is correct.  This is achieved by using the enumerate() function. this function itinerates through the items in the 'data' dictionary with all the 'questions', 'choices', and 'answer'.
+
+* The console displays instructions on how to answer, and requests the player to input their answer via one of these numbers:  '1', '2', '3', or '4'.
+
+ * This loop is repeated until the 10th question is answered.
+
+!add image of the questions 
+
+### _4 - Correct Answer_
+
+ * When the player answered the question correctly, a message letting them know the answer was CORRECT will appear in the console.
+!image correct 
+
+ * When the answer is correct, the player's score will increase by one point. This variable is defined inside the same run_game() and the score will only be displayed at the end of the quiz. 
+
+!add image of correct answer 
+
+### _5 - Incorrect Answer_
+
+*When the player answered the question correctly, a message letting them know the answer was INCORRECT will appear in the console. when this happens, the player's score will not be incremented.
+!image incorrect 
+
+!add image of incorrect answer 
+
+### _6 - Invalid input verification_
+
+ * If the player enters anything other than the digits 1-4 as an answer, the player will receive this message: " ᕕ( ᐛ )ᕗ Only answer numbers from '1' to '4', try again!"
+the verification of the input is made by a while loop  that: 
+1 converts any input into an integer.
+2 checks whether the data is inside the range 1-4  
+
+!image of invalid entries 
+
+### _7 - Final Score_
+
+ * When all 10 questions are answered, the console displays the score. The number of correct answers is compared to the number of total questions.
+
+* When the player gets all 10 answers correctly, a unique message appears: " YEY! {player_username}, you are almost Mexican!"
+
+!image of top score 
+
+### _8 - Play Again_
+
+ * The console will display a message asking the player if they would like to play again. 
+
+!asking the player to play again 
+
+ * If the player enters 'y' the game will start again. If the player enters 'n' they will receive a closing message and the program will quit.
+
+!closing message
+
+ * If the User presses 'Y', the game will be restarted.
+ * If the User presses 'N', they will receive a closing message, and the game ends.
+
+
 
 
 

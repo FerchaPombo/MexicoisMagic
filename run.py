@@ -8,35 +8,36 @@ List of quesions for the program to iterate through while running the game
 
 data = [
     {
-        'question': 
-        "Which country holds the world`s greatest pyramid and what is the name ?",
+        'question':
+        "Which country holds the world`s greatest pyramid and what is the name?",
         "choices": ["El Castillo, Chichen Itza. Mexico ", "Prang Temple, Kol Ker. Cambodia ", "Giza Pyramid, Cairo. Egypt ", "Cholula Pyramid, Puebla. Mexico"],
         'answer': "4",
 
     },
     {
-        "question": 
+        "question":
         "How many languages are officially spoken throughout Mexico?",
-        "choices" : [" 10 ", " 1 ", " 69", " 20"],
-        "answer" : "3",
+        "choices": [" 10 ", " 1 ", " 69", " 20"],
+        "answer": "3",
 
     },
     {
-        "question": 
+        "question":
         "What animals appear on Mexico`s flag?",
-        "choices" :["Bull and Eagle", "Eagle and Snake ", "Rabbit and Leopard", "Snake and Puma"],
+        "choices": ["Bull and Eagle", "Eagle and Snake ", "Rabbit and Leopard", "Snake and Puma"],
         "answer": "2",
     },
     {
-        "question": "What is the capital of Mexico and one of the largest cities in the world?",
-        "choices" : ["Quito ", "Monterey ", "Buenos Aires", "CdMx"],
-        "answer" : "4",
+        "question":
+        "What is the capital of Mexico and one of the largest cities in the world?",
+        "choices": ["Quito ", "Monterey ", "Buenos Aires", "CdMx"],
+        "answer": "4",
     },
     {
         "question": 
         "This volcano, Located in Puebla, is an active volcano that covers the city in ash relatively often",
-        "choices" : ["Iztacihuatl", "Popocatepetl ", "Paricutin ", "Krakatoa"],
-        "answer" : "2",
+        "choices": ["Iztacihuatl", "Popocatepetl ", "Paricutin ", "Krakatoa"],
+        "answer": "2",
     },
     {
         "question":
@@ -48,26 +49,26 @@ data = [
     {
         "question":
         "What countries border Mexico?",
-        "choices" : ["United States & Guatemala ", "United States, Guatemala & El Salvador ", "United States & Belize ", "United States, Guatemala & Belize"],
-        "answer" : "4"
+        "choices": ["United States & Guatemala ", "United States, Guatemala & El Salvador ", "United States & Belize ", "United States, Guatemala & Belize"],
+        "answer": "4"
     },
     {
-        "question": 
+        "question":
         "From the list below, name the most prominent native civilization in the Yucatan peninsula.",
-        "choices" : ["Aztec/Mexica ", "Maya ", "Tolteca ", "Inca"],
+        "choices": ["Aztec/Mexica ", "Maya ", "Tolteca ", "Inca"],
         "answer": "2",
     },
     {
-        "question": 
+        "question":
         "Which Mexican city is built on an ancient lakebed, causing it to sink a few inches each year?",
-        "choices" : ["Hermosillo ", "CdMx ", "Guadalajara ", "Puebla"],
+        "choices": ["Hermosillo ", "CdMx ", "Guadalajara ", "Puebla"],
         "answer": "2",
     },
     {
-        "question": 
+        "question":
         "The Xoloitzcuintli is the national [what] of Mexico?",
-        "choices" : ["Drink", "Food ", "Dog", "Flower"],
-        "answer" : "3",
+        "choices": ["Drink", "Food ", "Dog", "Flower"],
+        "answer": "3",
     }
 ]
 
@@ -81,8 +82,8 @@ print("Welcome to the magic of Mexico Quiz!\n")
 
 def welcome_message():
     playing = None
-    
-    while  True:
+
+    while True:
         playing = (input("Would you like to play? ('y' or 'n') \n"))
     
         if playing == 'y':
@@ -98,6 +99,7 @@ def welcome_message():
 
 # Request users name before we can begin the game
 
+
 """
 In this function the user will be asked for their name. Any caracters that are not numerical, 
 will cause the program to reask the question to the user. 
@@ -105,7 +107,7 @@ will cause the program to reask the question to the user.
 
 def player_username():
     username = input("Tell me then, what is your name?\n")
-    
+
     while username.isnumeric():
         print("Please enter a valid name \n")
         username = input("Tell me then, what is your name?\n")
@@ -152,7 +154,7 @@ def start_game():
     score = 0 
     for i, question in enumerate(data):
         # make the question text to a max of 100 with 
-        small_question = textwrap.wrap(question['question'],width=100)
+        small_question = textwrap.wrap(question['question'], width=100)
         # print each line for the small question.
         for line in small_question:
             print()
@@ -174,7 +176,7 @@ def start_game():
             if int(players_choice) in [1, 2, 3, 4]:
                 break
             print(" ᕕ( ᐛ )ᕗ Only answer numbers from '1' to '4', try again!")
-        if players_choice == str(question['choices'].index(question['answer']) +1):
+        if players_choice == str(question['choices'].index(question['answer']) +1 ):
             print("٩(ˊᗜˋ*)و CORRECT! ٩(ˊᗜˋ*)و")
             score += 1
         else:
@@ -203,8 +205,10 @@ def start_game():
             exit()
         else:
             print("Please enter 'y' or 'n'")
-          
+
+
 def run():
+
 
     welcome_message()
     player_username()

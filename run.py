@@ -44,7 +44,7 @@ data = [
         "From which country did Mexico get its independence?",
         "choices": ["United Kingdom ", "Germany ", "Spain ", "Argentina"],
         "answer": "3",
-    
+  
     },
     {
         "question":
@@ -80,6 +80,7 @@ input as correctly.
 """
 print("Welcome to the magic of Mexico Quiz!\n")
 
+
 def welcome_message():
     playing = None
 
@@ -101,8 +102,8 @@ def welcome_message():
 
 
 """
-In this function the user will be asked for their name. Any caracters that are not numerical, 
-will cause the program to reask the question to the user. 
+In this function the user will be asked for their name. Any caracters that are not numerical,
+will cause the program to reask the question to the user.
 """
 
 def player_username():
@@ -115,14 +116,15 @@ def player_username():
     else: 
         print(f"Welcome {username}!\n")
 
- 
-# Display instructions function 
+
+# Display instructions function
 
 """
  User will be asked if they want to see the instructions dispayed or they want to procede directly to the game.
  The function will proove the caracters inserted are correct and if the option 'n' is selected. the program will quit. 
  Otherwise the game will prodcede to the questions.
-"""     
+"""
+
 
 def display_instructions():
 
@@ -154,14 +156,14 @@ def start_game():
     score = 0 
     for i, question in enumerate(data):
         # make the question text to a max of 100 with 
-        small_question = textwrap.wrap(question['question'], width=100)
+        small_question = textwrap.wrap(question['question'], width=80)
         # print each line for the small question.
         for line in small_question:
             print()
             print(line)
         for j, choice in enumerate(question['choices']):
             # make the question text to a max of 100 with 
-            small_choice = textwrap.wrap(choice, width=100)
+            small_choice = textwrap.wrap(choice, width=80)
             for line in small_choice:
                 print(f"{j + 1}. {line}")
 
@@ -171,7 +173,7 @@ def start_game():
                 """
 
         while True:
-            players_choice = input("Take a guess, answer '1','2','3' or '4':    \n")
+            players_choice = input("Take a guess, answer '1','2','3' or '4': \n")
 
             if int(players_choice) in [1, 2, 3, 4]:
                 break
@@ -185,14 +187,14 @@ def start_game():
 
         print()
         if score == 10:
-            print(f" YEY! {player_username}, you are almost mexican!")  
+            print(f" YEY! {player_username}, you are almost mexican!")
         print(f"GAME OVER... you scored : {score}/{len(data)}.")
 
         # Ask the player if they want to play again
         """ 
-        this while loops will ask the player if they want to play again, if so , the whole start_game 
-        function will run from the beggining. if no, the program will end, and if the user inputs 
-        something else than 'y' or 'n' to the terminal, they will be asked to input the correct data. 
+        this while loops will ask the player if they want to play again, if so , the whole start_game
+        function will run from the beggining. if no, the program will end, and if the user inputs
+        something else than 'y' or 'n' to the terminal, they will be asked to input the correct data.
         """
         
     while True:
@@ -209,10 +211,10 @@ def start_game():
 
 def run():
 
-
     welcome_message()
     player_username()
     display_instructions()
     start_game()
+
 
 run()

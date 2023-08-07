@@ -9,55 +9,55 @@ List of quesions for the program to iterate through while running the game
 data = [
     {
         'question': "Which country holds the world`s greatest pyramid and what is the name ?",
-        'choices': ["1.El Castillo, Chichen Itza. Mexico ", "2.Prang Temple, Kol Ker. Cambodia ", "3.Giza Pyramid, Cairo. Egypt ", "4.Cholula Pyramid, Puebla. Mexico"],
+        'choices': ["El Castillo, Chichen Itza. Mexico ", "Prang Temple, Kol Ker. Cambodia ", "Giza Pyramid, Cairo. Egypt ", "Cholula Pyramid, Puebla. Mexico"],
         'answer': "4",
 
     },
     {
         "question": "How many languages are officially spoken throughout Mexico?",
-        "choices": ["1. 10 ", "2. 1 ", "3. 69", "4. 20"],
+        "choices": [" 10 ", " 1 ", " 69", " 20"],
         "answer" : "3",
 
     },
     {
         "question": "What animals appear on Mexico`s flag?",
-        "choices":["1.Bull and Eagle", "2.Eagle and Snake ", "3.Rabbit and Leopard", "4.Snake and Puma"],
+        "choices":["Bull and Eagle", "Eagle and Snake ", "Rabbit and Leopard", "Snake and Puma"],
         "answer": "2",
     },
     {
         "question": "What is the capital of Mexico and one of the largest cities in the world?",
-        "choices": ["1.Quito ", "2.Monterey ", "3.Buenos Aires", "4.CdMx"],
+        "choices": ["Quito ", "Monterey ", "Buenos Aires", "CdMx"],
         "answer": "4",
     },
     {
         "question": "This volcano, Located in Puebla, is an active volcano that covers the city in ash relatively often",
-        "choices": ["1.Iztacihuatl", "2.Popocatepetl ", "3.Paricutin ", "4.Krakatoa"],
-        "answers": "2",
+        "choices": ["Iztacihuatl", "Popocatepetl ", "Paricutin ", "Krakatoa"],
+        "answer": "2",
     },
     {
         "question": "From which country did Mexico get its independence?",
-        "coices": ["1.United Kingdom ", "2.Germany ", "3.Spain ", "4.Argentina"],
+        "coices": ["United Kingdom ", "Germany ", "Spain ", "Argentina"],
         "answer": "3",
     
     },
     {
         "question": "What countries border Mexico?",
-        "choices": ["1.United States & Guatemala ", "2.United States, Guatemala & El Salvador ", "3.United States & Belize ", "4.United States, Guatemala & Belize"],
+        "choices": ["United States & Guatemala ", "United States, Guatemala & El Salvador ", "United States & Belize ", "United States, Guatemala & Belize"],
         "answer": "4"
     },
     {
         "question": "From the list below, name the most prominent native civilization in the Yucatan peninsula.",
-        "choices": ["1.Aztec/Mexica ", "2.Maya ", "3.Tolteca ", "4.Inca"],
+        "choices": ["Aztec/Mexica ", "Maya ", "Tolteca ", "Inca"],
         "answer": "2",
     },
     {
         "question": "Which Mexican city is built on an ancient lakebed, causing it to sink a few inches each year?",
-        "choices": ["1.Hermosillo ", "2.CdMx ", "3.Guadalajara ", "4.Puebla"],
+        "choices": ["Hermosillo ", "CdMx ", "Guadalajara ", "Puebla"],
         "answer": "2",
     },
     {
         "question": "The Xoloitzcuintli is the national [what] of Mexico?",
-        "choices": ["1.Drink", "2.Food ", "3.Dog", "4.Flower"],
+        "choices": ["Drink", "Food ", "Dog", "Flower"],
         "answer": "3",
     }
 ]
@@ -147,25 +147,26 @@ def start_game():
         # print each line for the small question.
         for line in small_question:
             print(line)
-        for j, choice in enumerate(question['choices']):
+        for j, answer in enumerate(question['answer']):
             # make the question text to a max of 100 with 
-            small_choice = textwrap.wrap(choice, width=100)
-            for line in small_choice:
+            small_answer = textwrap.wrap(answer, width=100)
+            for line in small_answer:
                 print(f"{j + 1}. {line}")
 
                 """
                 Up until this point, the questions are displayed on the terminal, randomly and sincronized with their choices
                 thanks to the enumerate function.
-                """
+                
         while True:
             player_choice = input("Take a guess, answer '1','2','3' or '4':    \n")
-            """
+            
             here is use a if statement that checks two conditions, if the player chioce is a digit and 
             if it is one of the following. 1,2,3,4.
-            """
+            
             if player_choice.isdigit() and int(player_choice) in [1,2,3,4]:
                 break
             print("ᕕ( ᐛ )ᕗ Only answer numbers from '1' to '4', try again!")
+            """
 
 def run():
 

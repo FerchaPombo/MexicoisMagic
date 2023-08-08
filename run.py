@@ -192,11 +192,14 @@ def start_game():
         while True:
             players_choice = input("Take a guess, answer '1','2','3' or '4': \n")
 
-            if int(players_choice) in [1, 2, 3, 4]:
+            if not players_choice.isnumeric():
+                print(" ᕕ( ᐛ )ᕗ Only numeric characters are valid!")
+            elif int(players_choice) in [1, 2, 3, 4]:
                 break
-            print(" ᕕ( ᐛ )ᕗ Only answer numbers from '1' to '4', try again!")
-        if players_choice == str(question['choices'].index
-                                  (question['answer'])+1):
+            else: 
+                print("(－‸ლ) Answer should be a number between '1' and '4'.")
+
+        if str(players_choice) == question['answer']:
             print("٩(ˊᗜˋ*)و CORRECT! ٩(ˊᗜˋ*)و")
             score += 1
         else:
@@ -206,7 +209,7 @@ def start_game():
         print()
         if score == 10:
             print(f" YEY! {player_username}, you are almost mexican!")
-        print(f"GAME OVER... you scored : {score}/{len(data)}.")
+            print(f"GAME OVER... you scored : {score}/{len(data)}.")
 
         # Ask the player if they want to play again
         """

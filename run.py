@@ -117,9 +117,11 @@ def welcome_message():
 
 
 """
-In this function the user will be asked for their name. Any caracters that are not numerical,
+In this function the user will be asked for their name.
+Any caracters that are not numerical,
 will cause the program to reask the question to the user.
 """
+
 
 def player_username():
     username = input("Tell me then, what is your name?\n")
@@ -193,7 +195,8 @@ def start_game():
             if int(players_choice) in [1, 2, 3, 4]:
                 break
             print(" ᕕ( ᐛ )ᕗ Only answer numbers from '1' to '4', try again!")
-        if players_choice == str(question['choices'].index(question['answer']) +1 ):
+        if players_choice == str(question['choices'].index
+                                  (question['answer'])+1):
             print("٩(ˊᗜˋ*)و CORRECT! ٩(ˊᗜˋ*)و")
             score += 1
         else:

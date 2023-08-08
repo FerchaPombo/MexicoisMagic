@@ -212,12 +212,12 @@ def start_game():
             print(f"The right answer is {question['answer']}")
 
         print()
-        if score == 10:
-            print(f" YEY! {player_username},you answered all correct!")
-            print(f"GAME OVER... you scored : {score}/{len(data)}.")
-        else:
-            print("Almost there!")
-            print(f"GAME OVER... you Scored : {score}/{len(data)}.")
+    if score == 10:
+        print(" YEY! Well done,you answered all correct!")
+        print(f"GAME OVER... you scored : {score}/{len(data)}.")
+    else:
+        print("Almost there!")
+        print(f"GAME OVER... you Scored : {score}/{len(data)}.")
 
         # Ask the player if they want to play again
         """
@@ -228,12 +228,12 @@ def start_game():
 
   
     while True:
-        restart_game = input(f"Would you like to play again {username}? 'y' or 'n' ")
+        restart_game = input("Would you like to play again? 'y' or 'n' ")
         if restart_game == 'y':
             start_game()
             break
         elif restart_game == 'n':
-            print(f"Good bye {username}, see you soon!")
+            print("Good bye, see you soon!")
             exit()
         else:
             print("Please enter 'y' or 'n'")

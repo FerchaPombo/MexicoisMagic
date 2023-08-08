@@ -201,12 +201,14 @@ def start_game():
                 print(f"{j + 1}. {line}")
 
                 """
-                Up until this point, the questions are displayed on the terminal, randomly and sincronized with their choices
+                Up until this point, the questions are displayed on the\
+                     terminal, randomly and sincronized with their choices
                 thanks to the enumerate function.
                 """
 
         while True:
-            players_choice = input("Take a guess, answer '1','2','3' or '4': \n")
+            players_choice = input("Take a guess, answer '1','2','3' or '4': ")
+            print()
 
             if not players_choice.isnumeric():
                 print(" ᕕ( ᐛ )ᕗ Only numeric characters are valid!")

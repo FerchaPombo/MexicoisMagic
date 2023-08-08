@@ -11,9 +11,9 @@ data = [
         'question':
         "Which country holds the world`s greatest pyramid and what`s its name?",
         "choices": [
-            "El Castillo, Chichen Itza. Mexico ", 
-            "Prang Temple, Kol Ker. Cambodia ", 
-            "Giza Pyramid, Cairo. Egypt ", 
+            "El Castillo, Chichen Itza. Mexico ",
+            "Prang Temple, Kol Ker. Cambodia ",
+            "Giza Pyramid, Cairo. Egypt ",
             "Cholula Pyramid, Puebla. Mexico",
         ],
         'answer': "4",
@@ -101,7 +101,7 @@ def welcome_message():
 
     while True:
         playing = (input("Would you like to play? ('y' or 'n') \n"))
- 
+
         if playing == 'y':
             print(f"Great! ^_^, let`s beggin!\n")
             break
@@ -130,7 +130,7 @@ def player_username():
         print("Please enter a valid name \n")
         username = input("Tell me then, what is your name?\n")
 
-    else: 
+    else:
         print(f"Welcome {username}!\n")
 
 
@@ -138,17 +138,15 @@ def player_username():
 
 """
  User will be asked if they want to see the instructions dispayed or they want to procede directly to the game.
- The function will proove the caracters inserted are correct and if the option 'n' is selected. the program will quit. 
+ The function will proove the caracters inserted are correct and if the option 'n' is selected. the program will quit.
  Otherwise the game will prodcede to the questions.
 """
 
 
 def display_instructions():
 
-    
     while True:
         username_instructions = (input("Would you like to know the instructions? ('y' or 'n') \n"))
-
 
         if username_instructions == 'y':
             print("Instructions are really simple, when a question pops up, you need to choose from the options available. You can input the answer with the numbers 1,2,3 or 4. The result will be shown to you, and if it is correct, it will be added to your score.")
@@ -161,12 +159,11 @@ def display_instructions():
             input()
             break
         else:
-            print("That is not a valid input, try with 'y' or 'n' ." )
+            print("That is not a valid input, try with 'y' or 'n' .")
             print()
 
 
-
-# Start the game function 
+# Start the game function
 def start_game():
     """
     This function will start the game when the user presses Enter. tshe random import willrandomly sort the questions.
@@ -174,17 +171,17 @@ def start_game():
     """
     # Randomly shuffle the questions
     random.shuffle(data)
-    # Set up the initial score 
-    score = 0 
+    # Set up the initial score
+    score = 0
     for i, question in enumerate(data):
-        # make the question text to a max of 100 with 
+        # make the question text to a max of 100 with
         small_question = textwrap.wrap(question['question'], width=100)
         # print each line for the small question.
         for line in small_question:
             print()
             print(line)
         for j, choice in enumerate(question['choices']):
-            # make the question text to a max of 100 width 
+            # make the question text to a max of 100 width
             small_choice = textwrap.wrap(choice, width=80)
             for line in small_choice:
                 print(f"{j + 1}. {line}")
@@ -201,7 +198,7 @@ def start_game():
                 print(" ᕕ( ᐛ )ᕗ Only numeric characters are valid!")
             elif int(players_choice) in [1, 2, 3, 4]:
                 break
-            else: 
+            else:
                 print("(－‸ლ) Answer should be a number between '1' and '4'.")
 
         if str(players_choice) == question['answer']:
@@ -226,7 +223,6 @@ def start_game():
         something else than 'y' or 'n' to the terminal, they will be asked to input the correct data.
         """
 
-  
     while True:
         restart_game = input("Would you like to play again? 'y' or 'n' ")
         if restart_game == 'y':

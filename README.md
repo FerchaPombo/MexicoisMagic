@@ -102,20 +102,12 @@ the verification of the input is made by a while loop  that:
 
 !closing message
 
- * If the User presses 'Y', the game will be restarted.
- * If the User presses 'N', they will receive a closing message, and the game ends.
+ * If the User presses 'y', the game will be restarted.
+ * If the User presses 'n', they will receive a closing message, and the game ends.
 
 
 
 
-
-
-
-
-
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
 
 ## Creating the Heroku app
 

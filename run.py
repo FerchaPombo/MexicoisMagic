@@ -9,8 +9,13 @@ List of quesions for the program to iterate through while running the game
 data = [
     {
         'question':
-        "Which country holds the world`s greatest pyramid and what is the name?",
-        "choices": ["El Castillo, Chichen Itza. Mexico ", "Prang Temple, Kol Ker. Cambodia ", "Giza Pyramid, Cairo. Egypt ", "Cholula Pyramid, Puebla. Mexico"],
+        "Which country holds the world`s greatest pyramid and what`s its name?",
+        "choices": [
+            "El Castillo, Chichen Itza. Mexico ", 
+            "Prang Temple, Kol Ker. Cambodia ", 
+            "Giza Pyramid, Cairo. Egypt ", 
+            "Cholula Pyramid, Puebla. Mexico",
+        ],
         'answer': "4",
 
     },
@@ -24,7 +29,12 @@ data = [
     {
         "question":
         "What animals appear on Mexico`s flag?",
-        "choices": ["Bull and Eagle", "Eagle and Snake ", "Rabbit and Leopard", "Snake and Puma"],
+        "choices": [
+            "Bull and Eagle",
+            "Eagle and Snake ",
+            "Rabbit and Leopard",
+            "Snake and Puma",
+        ],
         "answer": "2",
     },
     {
@@ -49,8 +59,13 @@ data = [
     {
         "question":
         "What countries border Mexico?",
-        "choices": ["United States & Guatemala ", "United States, Guatemala & El Salvador ", "United States & Belize ", "United States, Guatemala & Belize"],
-        "answer": "4"
+        "choices": [
+            "United States & Guatemala ",
+            "United States, Guatemala & El Salvador ",
+            "United States & Belize ",
+            "United States, Guatemala & Belize",
+        ],
+        "answer": "4",
     },
     {
         "question":

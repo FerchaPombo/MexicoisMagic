@@ -145,9 +145,10 @@ def player_username():
 
 def display_instructions():
 
-    username_instructions = (input("Would you like to know the instructions? ('y' or 'n') \n"))
-
+    
     while True:
+        username_instructions = (input("Would you like to know the instructions? ('y' or 'n') \n"))
+
 
         if username_instructions == 'y':
             print("Instructions are really simple, when a question pops up, you need to choose from the options available. You can input the answer with the numbers 1,2,3 or 4. The result will be shown to you, and if it is correct, it will be added to your score.")
@@ -155,10 +156,14 @@ def display_instructions():
             print("Press Enter to begin!")
             input()
             break
-        else:
+        elif username_instructions == 'n':
             print("Press Enter to begin!")
             input()
             break
+        else:
+            print("That is not a valid input, try with 'y' or 'n' ." )
+            print()
+
 
 
 # Start the game function 
@@ -210,6 +215,9 @@ def start_game():
         if score == 10:
             print(f" YEY! {player_username}, you are almost mexican!")
             print(f"GAME OVER... you scored : {score}/{len(data)}.")
+        elif score <=9:
+            print("Almost there!")
+            print(f"You Scored : {score}/{len(data)}.")
 
         # Ask the player if they want to play again
         """

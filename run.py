@@ -178,7 +178,7 @@ def start_game():
     score = 0 
     for i, question in enumerate(data):
         # make the question text to a max of 100 with 
-        small_question = textwrap.wrap(question['question'], width=80)
+        small_question = textwrap.wrap(question['question'], width=100)
         # print each line for the small question.
         for line in small_question:
             print()
@@ -213,11 +213,11 @@ def start_game():
 
         print()
         if score == 10:
-            print(f" YEY! {player_username}, you are almost mexican!")
+            print(f" YEY! {player_username},you answered all correct!")
             print(f"GAME OVER... you scored : {score}/{len(data)}.")
-        elif score <=9:
+        else:
             print("Almost there!")
-            print(f"You Scored : {score}/{len(data)}.")
+            print(f"GAME OVER... you Scored : {score}/{len(data)}.")
 
         # Ask the player if they want to play again
         """
@@ -228,12 +228,12 @@ def start_game():
 
   
     while True:
-        restart_game = input(f"Would you like to play again {player_username}? 'y' or 'n' ")
+        restart_game = input(f"Would you like to play again {username}? 'y' or 'n' ")
         if restart_game == 'y':
             start_game()
             break
         elif restart_game == 'n':
-            print(f"Good bye {player_username}, see you soon!")
+            print(f"Good bye {username}, see you soon!")
             exit()
         else:
             print("Please enter 'y' or 'n'")

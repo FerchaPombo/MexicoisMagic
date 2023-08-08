@@ -207,7 +207,7 @@ def start_game():
                 """
 
         while True:
-            players_choice = input("Take a guess, answer '1','2','3' or '4': ")
+            players_choice = input("Take a guess, answer '1','2','3' or '4': \n")
             print()
 
             if not players_choice.isnumeric():
@@ -243,7 +243,7 @@ def start_game():
         """
 
     while True:
-        restart_game = input("Would you like to play again? 'y' or 'n' ")
+        restart_game = input("Would you like to play again? 'y' or 'n'\n")
         if restart_game == 'y':
             start_game()
             break

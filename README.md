@@ -1,4 +1,5 @@
 # **Mexico is Magic Quiz**
+[_Click here to view live deployment_](https://magicmexico-92655f369bba.herokuapp.com/)
 
 Mexico is Magic is a simple Python quiz game that deploys to a console.
 
@@ -32,19 +33,18 @@ it includes functions that help the program get data from the user, validate the
 *After the welcome message, the player is asked weather if they want to play, and if so, they are asked to enter their username. 
 *The player must enter a valid data type, that means any alphabetical character, and at least 1, otherwise they will receive an error message. 
 
-!insert image of username asked 
+![Player asked for username](images/welcomemessage.jpg)
 
-!add image when it was incorrectly inputed 
+![When invalid name](images/wheninvalidname.jpg)
 
 ### _2 - Instructions_
 
- * After the player enters their name, they are offered the possibility of reading the instructions of the game or continuing without it. 
+* After the player enters their name, they are offered the possibility of reading the instructions of the game or continuing without it. 
 
-!add image of instructions asked ,plus instructions
+![Instructions asked plus questions](images/questionsdisplayedpressenter.jpg)
 
 *After any of the two choices they are asked to press enter to continue to the quiz. 
 *If they enter something other than 'y' or 'n', the player is asked to answer again the question.
-!imagen de press enter to continue 
 
 ### _3 - Quiz Questions_
 
@@ -55,9 +55,8 @@ image 'random.shuffle(data)'
 
 * The console displays instructions on how to answer, and requests the player to input their answer via one of these numbers:  '1', '2', '3', or '4'.
 
- * This loop is repeated until the 10th question is answered.
+* This loop is repeated until the 10th question is answered.
 
-!add image of the questions 
 
 ### _4 - Correct Answer_
 
@@ -66,14 +65,13 @@ image 'random.shuffle(data)'
 
  * When the answer is correct, the player's score will increase by one point. This variable is defined inside the same run_game() and the score will only be displayed at the end of the quiz. 
 
-!add image of correct answer 
 
 ### _5 - Incorrect Answer_
 
 *When the player answered the question correctly, a message letting them know the answer was INCORRECT will appear in the console. when this happens, the player's score will not be incremented.
 !image incorrect 
 
-!add image of incorrect answer 
+![Correct and Incorrect answer](images/Correctandincorrectmessagedisplayed.jpg)
 
 ### _6 - Invalid input verification_
 
@@ -82,7 +80,7 @@ the verification of the input is made by a while loop  that:
 1 converts any input into an integer.
 2 checks whether the data is inside the range 1-4  
 
-!image of invalid entries 
+![Invalid input messages](images/validationforwronginputinquestions.jpg)
 
 ### _7 - Final Score_
 
@@ -90,20 +88,21 @@ the verification of the input is made by a while loop  that:
 
 * When the player gets all 10 answers correctly, a unique message appears: " YEY! {player_username}, you are almost Mexican!"
 
-!image of top score 
+![Top score](images/10of10scorewithstars.jpg)
+![Score Displayed](images/endofgamewithscorecalculated.jpg)
 
 ### _8 - Play Again_
 
  * The console will display a message asking the player if they would like to play again. 
 
-!asking the player to play again 
-
  * If the player enters 'y' the game will start again. If the player enters 'n' they will receive a closing message and the program will quit.
 
-!closing message
+![Closing message](images/gameonverwith%20stars.jpg)
 
  * If the User presses 'y', the game will be restarted.
  * If the User presses 'n', they will receive a closing message, and the game ends.
+
+![Good bye](images/goodbyeendprogram.jpg)
 
 
 

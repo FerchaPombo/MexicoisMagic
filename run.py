@@ -189,7 +189,7 @@ def start_game():
     score = 0
     for i, question in enumerate(data):
         # make the question text to a max of 100 with
-        small_question = textwrap.wrap(question['question'], width=100)
+        small_question = textwrap.wrap(question['question'], width=80)
         # print each line for the small question.
         for line in small_question:
             print()
@@ -207,7 +207,8 @@ def start_game():
                 """
 
         while True:
-            players_choice = input("Take a guess, answer '1','2','3' or '4': \n")
+            players_choice = input("Choose one of the options between \
+                 1, 2, 3 or 4:\n")
             print()
 
             if not players_choice.isnumeric():

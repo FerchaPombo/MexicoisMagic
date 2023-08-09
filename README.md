@@ -27,9 +27,9 @@ it includes functions that help the program get data from the user, validate the
 
 ## Game elements 
 
-### _1 - Player username_
+### _1 - Welcome and Player username_
 
- *After the welcome message, the player is asked to enter their username. 
+*After the welcome message, the player is asked weather if they want to play, and if so, they are asked to enter their username. 
 *The player must enter a valid data type, that means any alphabetical character, and at least 1, otherwise they will receive an error message. 
 
 !insert image of username asked 

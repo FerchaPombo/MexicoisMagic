@@ -225,11 +225,13 @@ def start_game():
 
         print()
     if score == 10:
-        print(" YEY! Well done,you answered all correct!")
+        print("＼（Ｔ∇Ｔ）／YEY! Well done,you answered all correct!")
         print(f"GAME OVER... you scored : {score}/{len(data)}.")
+        print("*******************************************************")
     else:
         print("Almost there!")
         print(f"GAME OVER... you Scored : {score}/{len(data)}.")
+        print("*******************************************************")
 
         # Ask the player if they want to play again
         """
@@ -247,7 +249,8 @@ def start_game():
             start_game()
             break
         elif restart_game == 'n':
-            print("Good bye, see you soon!")
+            print()
+            print( "٩( ͡° ͜ʖ ͡°)งGood bye, see you soon! ٩( ͡° ͜ʖ ͡°)ง")
             exit()
         else:
             print("Please enter 'y' or 'n'")

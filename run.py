@@ -10,7 +10,7 @@ data = [
     {
         'question':
         "Which country holds the world`s greatest pyramid and what`s its \
-             name?",
+name?",
         "choices": [
             "El Castillo, Chichen Itza. Mexico ",
             "Prang Temple, Kol Ker. Cambodia ",
@@ -41,14 +41,14 @@ data = [
     {
         "question":
         "What is the capital of Mexico and one of the largest cities in \
-            the world?",
+the world?",
         "choices": ["Quito ", "Monterey ", "Buenos Aires", "CdMx"],
         "answer": "4",
     },
     {
         "question":
         "This volcano, Located in Puebla, is an active volcano that covers \
-            the city in ash relatively often",
+the city in ash relatively often",
         "choices": ["Iztacihuatl", "Popocatepetl ", "Paricutin ", "Krakatoa"],
         "answer": "2",
     },
@@ -73,14 +73,14 @@ data = [
     {
         "question":
         "From the list below, name the most prominent native civilization \
-             in the Yucatan peninsula.",
+in the Yucatan peninsula.",
         "choices": ["Aztec/Mexica ", "Maya ", "Tolteca ", "Inca"],
         "answer": "2",
     },
     {
         "question":
         "Which Mexican city is built on an ancient lakebed, causing it \
-            to sink a few inches each year?",
+to sink a few inches each year?",
         "choices": ["Hermosillo ", "CdMx ", "Guadalajara ", "Puebla"],
         "answer": "2",
     },
@@ -142,28 +142,27 @@ def player_username():
 # Display instructions function
 
 """
- User will be asked if they want to see the instructions dispayed or they want\
-     to procede directly to the game.
- The function will proove the caracters inserted are correct and if the option\
-     'n' is selected. the program will quit.
- Otherwise the game will prodcede to the questions.
+User will be asked if they want to see the instructions dispayed or they want\
+to procede directly to the game.
+The function will proove the caracters inserted are correct and if the option\
+'n' is selected. the program will quit.
+Otherwise the game will prodcede to the questions.
 """
 
 
 def display_instructions():
 
     while True:
-        username_instructions = (input("Would you like to know the\
-            instructions?('y' or 'n') \n"))
+        username_instructions = (input("Would you like to know the \
+instructions?('y' or 'n') \n"))
 
         if username_instructions == 'y':
             print("Instructions are really simple, when a question pops up,\
-                you need to choose from the options available. You can input\
-                    the answer with the numbers 1,2,3 or 4. The result will be\
-                        shown to you, and if it is correct, it will be added\
-                            to your score.")
+you need to choose from the options available. You can input\
+the answer with the numbers 1,2,3 or 4. The result will be\
+shown to you, and if it is correct, it will be added to your score.")
             print("In the end, you will know if you were aware of these\
-                amazing facts about Mexico.\n")
+amazing facts about Mexico.\n")
             print("Press Enter to begin!")
             input()
             break
@@ -180,7 +179,7 @@ def display_instructions():
 def start_game():
     """
     This function will start the game when the user presses Enter. tshe random\
-         import willrandomly sort the questions.
+    import willrandomly sort the questions.
     the initial score will be set up to 0.
     """
     # Randomly shuffle the questions
@@ -192,23 +191,22 @@ def start_game():
         small_question = textwrap.wrap(question['question'], width=80)
         # print each line for the small question.
         for line in small_question:
-            print()
             print(line)
         for j, choice in enumerate(question['choices']):
             # make the question text to a max of 100 width
             small_choice = textwrap.wrap(choice, width=80)
             for line in small_choice:
-                print(f"{j + 1}. {line}")
+                print(f"{j + 1}.{line}")
 
                 """
                 Up until this point, the questions are displayed on the\
-                     terminal, randomly and sincronized with their choices
+                terminal, randomly and sincronized with their choices
                 thanks to the enumerate function.
                 """
 
         while True:
             players_choice = input("Choose one of the options between \
-                 1, 2, 3 or 4:\n")
+1, 2, 3 or 4:\n")
             print()
 
             if not players_choice.isnumeric():
@@ -236,11 +234,11 @@ def start_game():
         # Ask the player if they want to play again
         """
         this while loops will ask the player if they want to play again,\
-             if so , the whole start_game
+        if so , the whole start_game
         function will run from the beggining. if no, the program will end,\
-             and if the user inputs
+        and if the user inputs
         something else than 'y' or 'n' to the terminal, they will be asked\
-             to input the correct data.
+        to input the correct data.
         """
 
     while True:

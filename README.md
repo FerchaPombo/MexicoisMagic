@@ -103,6 +103,10 @@ the verification of the input is made by a while loop  that:
  * If the User presses 'n', they will receive a closing message, and the game ends.
 
 ![Good bye](images/goodbyeendprogram.jpg)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 47d96249c8dc88c36d3d7ef1329bd7ef8d0c7214
 
 
 

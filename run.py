@@ -164,10 +164,14 @@ shown to you, and if it is correct, it will be added to your score.")
             print("In the end, you will know if you were aware of these\
 amazing facts about Mexico.\n")
             print("Press Enter to begin!")
+            print("****************************************************\
+*****************")
             input()
             break
         elif username_instructions == 'n':
             print("Press Enter to begin!")
+            print("****************************************************\
+*****************")
             input()
             break
         else:
@@ -227,11 +231,13 @@ def start_game():
     if score == 10:
         print("＼（Ｔ∇Ｔ）／YEY! Well done,you answered all correct!")
         print(f"GAME OVER... you scored : {score}/{len(data)}.")
-        print("*******************************************************")
+        print("****************************************************\
+*****************")
     else:
         print("Almost there!")
         print(f"GAME OVER... you Scored : {score}/{len(data)}.")
-        print("*******************************************************")
+        print("****************************************************\
+*****************")
 
         # Ask the player if they want to play again
         """

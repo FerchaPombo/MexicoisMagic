@@ -139,15 +139,12 @@ the verification of the input is made by a while loop  that:
 -[Fixing lenth of lines](https://www.pythonmorsels.com/breaking-long-lines-code-python/)
 -[Fixing lenth of lines](https://peps.python.org/pep-0008/#maximum-line-length)
 
-* Testing site responsiveness was tested using online tools such as (https://responsivedesignchecker.com/)
-![Responsiveness](images/)
 
 # **Validation**
 
 * This quiz game passes through the [Code Institute PEP8](https://pep8ci.herokuapp.com/) Validator with no errors.
 ![Validation](images/CodeInstitutevalidatornoerror.jpg)
-* Testing site responsiveness was tested using online tool  tools such as(https://ui.dev/amiresponsive)
-![Responsiveness](images/)
+
 
 | Testing     | What should happen:     |   Result  | 
 | :----     |    :----   |  :---- | 

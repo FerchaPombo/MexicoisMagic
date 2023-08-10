@@ -148,3 +148,16 @@ the verification of the input is made by a while loop  that:
 ![Validation](images/CodeInstitutevalidatornoerror.jpg)
 * Testing site responsiveness was tested using online tool  tools such as(https://ui.dev/amiresponsive)
 ![Responsiveness](images/)
+
+| Testing     | What should happen:     |   Result  | 
+| :----     |    :----   |  :---- | 
+| Run.py file running | run.py loads and welcome message appears | Working as expected |
+| User not giving the correct data type  | Error message appears and the user is asked to do it again | Working as expected |
+| Instructions asked to be displayed or not  | When the user gives invalid or empty input, they are asked to do it correctly  | Working as expected |
+| Press Enter to start the quiz | When Enter clicked, first quiz question appears | Working as expected |
+| Answers entered are in the range of 1-4 and numeric digits | When the user fails to give the correct input, they are told why it is incorrect and asked to do it again | Working as expected |
+| Press Enter after reading or not the questions to begin the game| Questions are shown randomly from 1 to 10, when all have been displayed and answered, the score is shown. | Working as expected |
+| User gets 10 out of 10 | A special congratulations message appears and shows the players score | Working as expected |
+| User presses Enter with no input | Message of  Invalid Input appears and askes the user to enter 'y' or 'n'. | Working as expected |
+| User press 'y' to play again.  | Questions are randomly chosen to restart the game. | Working as expected |
+| User press 'n' to exit game  | Goodbye message appears and program quits | Working as expected |

@@ -107,8 +107,9 @@ the verification of the input is made by a while loop  that:
 # **Bugs**
 
 * Through testing, I was made aware of many issues I had to fix and decisions I had to make when building my functions before I came up with the structure I made. 
+* As will be seen in my commits, I started the structure of the quiz by creating tuples with each, 'question', 'possible choices', and 'answer'. That was not sustainable... I then restructured the game and made a dictionary instead.  this allowed me to have easier, faster access to my data questions. I also restructured the game almost all in one function, with my choice being through an Enumerate function. which was not easy at first to understand, but with paper and pen and the help of a couple of Tutor Sessions, ended up working!
 
-[Link to the list of external resources used while creating this quiz game](workspaces/MexicoisMagic/ExternalResources.md)
+* List of external resources used while creating this quiz game:
 
 -[Quiz source information](https://www.funtrivia.com/)
 -[Quiz source information](https://www.quiztriviagames.com/mexico-quiz/)
@@ -138,10 +139,12 @@ the verification of the input is made by a while loop  that:
 -[Fixing lenth of lines](https://www.pythonmorsels.com/breaking-long-lines-code-python/)
 -[Fixing lenth of lines](https://peps.python.org/pep-0008/#maximum-line-length)
 
+* Testing site responsiveness was tested using online tools such as (https://responsivedesignchecker.com/)
+![Responsiveness](images/)
 
+# **Validation**
 
-
-
-
-
-
+* This quiz game passes through the [Code Institute PEP8](https://pep8ci.herokuapp.com/) Validator with no errors.
+![Validation](images/CodeInstitutevalidatornoerror.jpg)
+* Testing site responsiveness was tested using online tool  tools such as(https://ui.dev/amiresponsive)
+![Responsiveness](images/)

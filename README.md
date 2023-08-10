@@ -107,7 +107,11 @@ the verification of the input is made by a while loop  that:
 # **Bugs**
 
 * Through testing, I was made aware of many issues I had to fix and decisions I had to make when building my functions before I came up with the structure I made. 
-* List of resources used while creating this quiz game: 
+
+[Link to the list of external resources used while creating this quiz game](workspaces/MexicoisMagic/ExternalResources.md)
+
+
+
 
 
 

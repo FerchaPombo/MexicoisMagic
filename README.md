@@ -86,7 +86,7 @@ the verification of the input is made by a while loop  that:
 
  * When all 10 questions are answered, the console displays the score. The number of correct answers is compared to the number of total questions.
 
-* When the player gets all 10 answers correctly, a unique message appears: " YEY! {player_username}, you are almost Mexican!"
+* When the player gets all 10 answers correctly, a unique message appears: " YEY! Well done, you answered all correct!
 
 ![Top score](images/10of10scorewithstars.jpg)
 ![Score Displayed](images/endofgamewithscorecalculated.jpg)
@@ -158,3 +158,23 @@ the verification of the input is made by a while loop  that:
 | User presses Enter with no input | Message of  Invalid Input appears and askes the user to enter 'y' or 'n'. | Working as expected |
 | User press 'y' to play again.  | Questions are randomly chosen to restart the game. | Working as expected |
 | User press 'n' to exit game  | Goodbye message appears and program quits | Working as expected |
+
+# **Deployment**
+
+* This quiz game was used using CodeAnywhere to push the code to the main repository in GitHub.
+
+* Normal commands like 'git add .', 'git commit -m ', and ' git push' were used to push changes to my repository. 
+
+* Deployment was made through Heroku CLI, following the directions given by Code Institute material. 
+
+Go to the live deployment [HERE](https://magicmexico-92655f369bba.herokuapp.com/).
+
+# **Credits**
+
+* Creator: Fercha Pombo @ferchapombo
+* Link to Github : [Github](https://github.com/FerchaPombo)
+  
+Throughout the process of creating this game application, I went through different websites and forums that helped me with the creation of my project. They are specified in the section 'BUGS'.
+
+Special thanks to the community in Slack and to Tutor Support, which helped me through this messy module I had. 
+Special thanks to my fellow students in the Slack Community where, through examples and a lot of learning I managed to deliver this module. 
